@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-sans: var(--font-jakarta), system-ui, sans-serif;
+
+  --color-ivory: #FDFBF7;
+  --color-espresso: #2C1B14;
+  --color-latte: #9E7A5F;
+  --color-latte-light: #F4ECE1;
+  --color-sage: #8F9779;
+  
+  --color-espresso-dark: #120A06;
+  --color-espresso-card: #1F120B;
+}
+
+:root {
+  --background: #FDFBF7;
+  --foreground: #2C1B14;
+}
+
+.dark {
+  --background: #120A06;
+  --foreground: #F4ECE1;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1), color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-x: hidden;
+}
+
+/* Custom Glassmorphism Utility */
+.glass-nav {
+  background-color: rgba(253, 251, 247, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(44, 27, 20, 0.05);
+}
+
+.dark .glass-nav {
+  background-color: rgba(18, 10, 6, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(244, 236, 225, 0.05);
+}
+
+/* Custom Hide Scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
